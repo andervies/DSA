@@ -22,7 +22,7 @@ def two_sums(nums: List[int], target: int) -> Optional[List[int]]:
 print(two_sums([1, 2, 3, 4], 5))
 
 
-class TestTwoSums(unittest.TestCase):
+class TestwoSums(unittest.TestCase):
 
     def test_basic_cases(self):
         self.assertEqual(two_sums([12, 3, 4, 6, 8], 10), [2, 3])  # 4 + 6 = 10

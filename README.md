@@ -1,2 +1,2 @@
 # DSA
-Data structures and algorithms in python
+Practicing Data structures and algorithms solutions in python

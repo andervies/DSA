@@ -17,6 +17,11 @@ def decipher_ceasar(key, cipher_text):
 class Caesar:
 
     def cipher(self, plain_text, key):
+        """
+                :param plain_text: string
+                :param key: int
+                :return cipher_text: string
+                """
         cipher_text = ""
 
         for char in plain_text.encode("ascii"):
@@ -31,6 +36,11 @@ class Caesar:
         return cipher_text
 
     def decipher(self, cipher_text, key):
+        """
+        :param cipher_text: string
+        :param key: int
+        :return plain_text: string
+        """
         plain_text = ""
 
         for char in cipher_text.encode("ascii"):

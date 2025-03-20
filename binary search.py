@@ -1,6 +1,22 @@
 
 
 def binary_search(arr, element):
+    """
+    Searches for an element in a sorted array using binary search.
+
+    Args:
+        arr (list): A sorted list of integers.
+        element (int): The integer to search for in the array.
+
+    Returns:
+        int or None: The index of the element if found; None if it does not exist in the array.
+
+    Raises:
+        ValueError: If the input array is not sorted.
+    """
+
+    ## Raise valueError if array is not sorted
+
     low = 0
     high = len(arr) - 1
 

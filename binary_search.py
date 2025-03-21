@@ -1,5 +1,3 @@
-
-
 def binary_search(arr, element):
     """
     Searches for an element in a sorted array using binary search.

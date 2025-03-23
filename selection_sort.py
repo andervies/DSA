@@ -1,4 +1,12 @@
 def find_smallest_index(arr):
+    """Finds the index of the smallest element in an array.
+
+    Args:
+        arr (list): A list of integers.
+
+    Returns:
+        int: The index of the smallest element.
+    """
     smallest = arr[0]
     smallest_index = 0
     for i in range(1, len(arr)):

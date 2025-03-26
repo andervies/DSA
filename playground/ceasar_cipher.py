@@ -17,11 +17,15 @@ def decipher_ceasar(key, cipher_text):
 class Caesar:
 
     def cipher(self, plain_text, key):
+        """Converts plain text to Caesar cipher text.
+
+        Args:
+            plain_text (str): Text to convert to cipher text.
+            key (int): Number of positions to shift letters. Non-alphabetic characters remain unchanged.
+
+        Returns:
+            str: Caesar cipher equivalent of the input text.
         """
-                :param plain_text: string
-                :param key: int
-                :return cipher_text: string
-                """
         cipher_text = ""
 
         for char in plain_text.encode("ascii"):

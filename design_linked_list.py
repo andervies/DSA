@@ -9,7 +9,7 @@ class MyLinkedList:
 
     def __init__(self):
         self.head = ListNode(-1)
-        self.tail = ListNode(-1)
+        self.tail = self.head
         # self.head.next = self.tail
         # self.tail.prev = self.head
 
@@ -24,16 +24,16 @@ class MyLinkedList:
         return -1
 
     def addAtHead(self, val: int) -> None:
-        self.head.prev = ListNode(val)
-        self.head.prev.next = self.head
-        self.head = self.head.prev
-        print(self.head.val)
-        print(self.head.next.val)
+        new_node = ListNode(val)
+        new_node.next = self.head.next
+        self.head.next = new_node
 
-        return True
+        if self.head == self.tail:
+            self.tail = new_node
 
     def addAtTail(self, val: int) -> None:
-        return True
+        self.tail.next = ListNode(val)
+        self.tail = self.tail.next
 
     def addAtIndex(self, index: int, val: int) -> None:
 
@@ -50,3 +50,16 @@ class MyLinkedList:
 # obj.addAtTail(val)
 # obj.addAtIndex(index,val)
 # obj.deleteAtIndex(index)
+
+my_linked = MyLinkedList()
+my_linked.addAtHead(2)
+my_linked.addAtTail(3)
+my_linked.addAtTail(4)
+
+curr = my_linked.head
+for i in range(4):
+
+    print(curr.val)
+    curr = curr.next
+
+print(my_linked.get(1))

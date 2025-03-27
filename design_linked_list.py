@@ -15,8 +15,13 @@ class MyLinkedList:
 
     def get(self, index: int) -> int:
         index_node = self.head.next
-        for i in range(index):
-            if i == index:
+        count = -1
+
+        while index_node:
+            count += 1
+
+            if count == index:
+                print(count)
                 return index_node.val
             elif index_node:
                 index_node = index_node.next
@@ -57,9 +62,9 @@ my_linked.addAtTail(3)
 my_linked.addAtTail(4)
 
 curr = my_linked.head
-for i in range(4):
+# for i in range(4):
+#
+#     print(curr.val)
+#     curr = curr.next
 
-    print(curr.val)
-    curr = curr.next
-
-print(my_linked.get(1))
+print(my_linked.get(5))
